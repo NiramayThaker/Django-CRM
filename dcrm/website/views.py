@@ -1,9 +1,18 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout 
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from . import forms
 
+# @login_required(login_url='login/')
 # Create your views here.
 def home(request):
+
+    # else:
+    return render(request, "home.html")
+
+
+def login_user(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['pswd']
@@ -16,12 +25,9 @@ def home(request):
         else:
             messages.error(request, "Couldn't log in")
             return redirect('home')
-    else:
-        return render(request, "home.html")
+        
+    return render(request, 'login.html')
 
-
-# def login(request):
-#     pass
 
 def logout_user(request):
     logout(request)
@@ -30,4 +36,7 @@ def logout_user(request):
 
 
 def register_user(request):
-    return render(request, "user_reg.html")
+    reg_form = forms.RegistrationForm()
+
+    context = {'reg_form': reg_form}
+    return render(request, "user_reg.html", context=context)
