@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f12891b3-c8ab-4e7b-a626-33d706c41be6" name="Changes" comment="--">
-      <change beforePath="$PROJECT_DIR$/dcrm/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/dcrm/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dcrm/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/dcrm/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dcrm/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/dcrm/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dcrm/website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dcrm/website/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dcrm/website/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dcrm/website/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,20 +20,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CRM-django" />
@@ -64,6 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693922487742</updated>
       <workItem from="1693922535274" duration="1335000" />
+      <workItem from="1694282078190" duration="3035000" />
     </task>
     <task id="LOCAL-00001" summary="--">
       <created>1693923203595</created>
@@ -72,13 +76,49 @@
       <option name="project" value="LOCAL" />
       <updated>1693923203595</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Set up">
+      <created>1694282111656</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694282111656</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Set up">
+      <created>1694323560137</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694323560138</updated>
+    </task>
+    <task id="LOCAL-00004" summary="--">
+      <created>1694323988819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694323988819</updated>
+    </task>
+    <task id="LOCAL-00005" summary="--">
+      <created>1694344364859</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694344364859</updated>
+    </task>
+    <task id="LOCAL-00006" summary="--">
+      <created>1694344607065</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694344607065</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Set up" />
     <MESSAGE value="--" />
     <option name="LAST_COMMIT_MESSAGE" value="--" />
   </component>

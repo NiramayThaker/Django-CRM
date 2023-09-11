@@ -1,12 +1,21 @@
-{% extends 'base.html' %}
+<div class="col-md-6 offset-md-3">
+      
+    <h1>Login</h1>
 
-{% block content %}
+    <form action="{% url 'home' %}" method="post">
 
-    <form action="login/" method="post">
-        Name: <input type="text" name="name" id="name"> <br>
-        Password: <input type="password" name="pswd" id="pswd">
+       {% csrf_token %}
 
-        <button type="submit">Login</button>
+       <div class="form-group">   
+          <input type="text" class="form-control" name="username" placeholder="Enter username" required>
+       </div> <br>
+
+       <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" name="pswd" required>
+       </div> <br>
+       
+       <button type="submit" class="btn btn-secondary">Login</button>
+       
     </form>
 
-{% endblock content %}
+ </div>
