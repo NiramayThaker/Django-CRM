@@ -4,11 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from . import forms
 
-# @login_required(login_url='login/')
+@login_required(login_url='login/')
 # Create your views here.
 def home(request):
-
-    # else:
     return render(request, "home.html")
 
 
