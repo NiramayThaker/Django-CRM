@@ -35,6 +35,17 @@ def logout_user(request):
 
 def register_user(request):
     reg_form = forms.RegistrationForm()
-
+    if request.method == "POST":
+        reg_form = forms.RegistrationForm(request.POST)
+        if reg_form.is_valid():
+            user = reg_form.save()
+            if user is not None:
+                login(request, user)
+                messages.success(request, "User registered successfully")
+                return redirect('home')
+            else:
+                messages.success(request, "Can't registered user")
+                return redirect('register')         
+            
     context = {'reg_form': reg_form}
     return render(request, "user_reg.html", context=context)
