@@ -12,7 +12,8 @@ class RegistrationForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 
-class AddRecodForm(forms.Form):
+class AddRecodForm(forms.ModelForm):
     class Meta:
         model = Record
         fields = "__all__"
+        exclude = ['created_at']

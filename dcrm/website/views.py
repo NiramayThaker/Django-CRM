@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from . import forms
+from .forms import RegistrationForm, AddRecodForm
 from .models import Record
 
 
@@ -39,9 +39,9 @@ def logout_user(request):
 
 
 def register_user(request):
-	reg_form = forms.RegistrationForm()
+	reg_form = RegistrationForm()
 	if request.method == "POST":
-		reg_form = forms.RegistrationForm(request.POST)
+		reg_form = RegistrationForm(request.POST)
 		if reg_form.is_valid():
 			user = reg_form.save()
 			if user is not None:
@@ -75,4 +75,13 @@ def delete_record(request, pk):
 
 
 def add_record(request):
-	return redirect(request, 'add_record.html')
+	record_form = AddRecodForm(request.POST or None)
+
+	if request.method == 'POST':		
+		if record_form.is_valid():
+			add = record_form.save()
+			messages.success(request, "Record added")
+			return redirect("home")
+
+	context = {"record_form": record_form}
+	return render(request, 'add_record.html', context=context)
