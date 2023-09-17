@@ -57,4 +57,7 @@ def register_user(request):
 
 
 def customer_record(request, pk):
-	pass
+	cust_rec = Record.objects.get(id=pk)
+
+	context = {"cust_rec": cust_rec}
+	return render(request, 'customer_record.html', context=context)
