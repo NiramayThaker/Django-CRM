@@ -72,3 +72,7 @@ def delete_record(request, pk):
 
 	messages.success(request, "Can only be deleted by super user")
 	return redirect("home")
+
+
+def add_record(request):
+	return redirect(request, 'add_record.html')
