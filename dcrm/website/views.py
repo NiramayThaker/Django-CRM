@@ -85,3 +85,15 @@ def add_record(request):
 
 	context = {"record_form": record_form}
 	return render(request, 'add_record.html', context=context)
+
+
+def update_record(request, pk):
+	curr_record = Record.objects.get(id=pk)
+	form = AddRecodForm(request.POST or None, instance=curr_record)
+
+	if form.is_valid():
+		form.save()
+		messages.success(request, "Record Updated")
+		return redirect("home")
+	
+	return render(request, "update_record.html", {"form": form})

@@ -14,7 +14,7 @@
     {{cust_rec.zipcode}}<br>
 
     <a href="{% url 'home' %}">BACK</a>
-    {% comment %} <a href="{% url 'delete-record' record.id %}">Delete</a> {% endcomment %}
     <a href="{% url "delete-record" cust_rec.id %}">Delete</a>
+    <a href="{% url "update-record" cust_rec.id %}">Update</a>
 
 {% endblock content %}
