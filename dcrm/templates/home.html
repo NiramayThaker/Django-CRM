@@ -4,6 +4,18 @@
 
 {% block content %}
 
-<h1>Hello</h1>
+<h1>Records</h1>
+<br>
+
+{% for record in records %}
+
+    <p>First Name: {{record.first_name}}</p>
+    <p>Last Name: {{record.last_name}}</p>
+    <p>Zip Code: {{record.zipcode}}</p> 
+
+    <hr>
+
+{% endfor %}
+
 
 {% endblock content %}
