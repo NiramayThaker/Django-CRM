@@ -4,12 +4,21 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import RegistrationForm, AddRecodForm
 from .models import Record
+from django.db.models import Q
 
 
 @login_required(login_url='login/')
 # Create your views here.
 def home(request):
 	records = Record.objects.all()
+	q = request.GET.get('Q')
+
+	if q is not None:
+		records = Record.objects.filter(
+			Q(first_name__icontains=q),
+			# Q(last_name__icontains=q),
+			# Q(email__icontains=q),
+		)
 
 	context = {'records': records}
 	return render(request, "home.html", context=context)
