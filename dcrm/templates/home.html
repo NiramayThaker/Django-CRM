@@ -9,6 +9,7 @@
 
 {% for record in records %}
 
+    <a href="{% url "customer-record" record.id %}"><p> {{record.id}}</p></a>
     <p>First Name: {{record.first_name}}</p>
     <p>Last Name: {{record.last_name}}</p>
     <p>Zip Code: {{record.zipcode}}</p> 
