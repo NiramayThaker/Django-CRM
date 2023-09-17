@@ -61,3 +61,14 @@ def customer_record(request, pk):
 
 	context = {"cust_rec": cust_rec}
 	return render(request, 'customer_record.html', context=context)
+
+
+def delete_record(request, pk):
+	if request.user.is_superuser:
+		delete_it = Record.objects.get(id=pk)
+		delete_it.delete()
+		messages.success(request, "Record deleted successfully .!")
+		return redirect('home')
+
+	messages.success(request, "Can only be deleted by super user")
+	return redirect("home")

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{cust_rec}}{% endblock title %}
+
+{% block content %}
+ <br>
+ <br>
+    <h3> {{cust_rec.first_name}} {{cust_rec.last_name}} </h3>
+    {{cust_rec.email}}<br>
+    {{cust_rec.phone}}<br>
+    {{cust_rec.address}}<br>
+    {{cust_rec.city}}<br>
+    {{cust_rec.state}}<br>
+    {{cust_rec.zipcode}}<br>
+
+    <a href="{% url 'home' %}">BACK</a>
+    {% comment %} <a href="{% url 'delete-record' record.id %}">Delete</a> {% endcomment %}
+    <a href="{% url "delete-record" cust_rec.id %}">Delete</a>
+
+{% endblock content %}
